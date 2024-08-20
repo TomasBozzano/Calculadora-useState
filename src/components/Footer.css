@@ -1,0 +1,26 @@
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+p{
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+.ft-links{
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+}
+.ft-links{
+    color: #000;
+    text-decoration: none;
+}
+img{
+    width: 2rem;
+    height: 2rem;
+}
+img:hover{
+    transform: scale(1.1);
+}
