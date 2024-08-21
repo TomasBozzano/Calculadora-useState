@@ -10,8 +10,10 @@ export default function PathNumber() {
             setNumber({operation: e.target.textContent})
         }else if (e.target.textContent === '.') {
             setNumber({operation: number.operation + e.target.textContent})
-        } else {
-            console.log(e.target.textContent)
+         }else if(e.target.textContent === 'X'){
+            setNumber({operation: number.operation + '*'})
+         }
+        else{
             setNumber({operation: number.operation + e.target.textContent})
         }
         
@@ -21,7 +23,7 @@ export default function PathNumber() {
     }
     const handleResult = () => {
             setNumber({operation: eval(number.operation)})
-    }
+        }
     const handlePorcentage = () => {
         setNumber({operation: number.operation / 100})
     }
@@ -41,7 +43,7 @@ export default function PathNumber() {
                 <Boton valueNumber="7" clase="numberEnter" handleClick={handleWritten} />
                 <Boton valueNumber="8" clase="numberEnter" handleClick={handleWritten} />
                 <Boton valueNumber="9" clase="numberEnter" handleClick={handleWritten} />
-                <Boton valueNumber="*" clase="operator" handleClick={handleWritten}/>
+                <Boton valueNumber="X" clase="operator" handleClick={handleWritten}/>
                 <Boton valueNumber="4" clase="numberEnter" handleClick={handleWritten} />
                 <Boton valueNumber="5" clase="numberEnter" handleClick={handleWritten} />
                 <Boton valueNumber="6" clase="numberEnter" handleClick={handleWritten} />
@@ -51,7 +53,7 @@ export default function PathNumber() {
                 <Boton valueNumber="3" clase="numberEnter" handleClick={handleWritten} />
                 <Boton valueNumber="+" clase="operator" handleClick={handleWritten} />
                 <Boton valueNumber="0" clase="cero" handleClick={handleWritten} />
-                <Boton valueNumber="."  clase="numberEnter" handleClick={handleWritten}/>
+                <Boton valueNumber="." clase="numberEnter" handleClick={handleWritten}/>
                 <Boton valueNumber="=" clase="operator" handleClick={handleResult} />
             </div>
         </>
